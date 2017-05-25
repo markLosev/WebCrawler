@@ -28,9 +28,9 @@ public class EmailDataBase {
             String driver = "jdbc:sqlserver:";
             String url = "//lcmdb.cbjmpwcdjfmq.us-east-1.rds.amazonaws.com:";
             String port = "1433";
-            String username = "DS7";
-            String password = "Touro123";
-            String database = "DS7";
+            String username = "";
+            String password = "";
+            String database = "";
             connection = driver + url + port + ";databaseName=" + database + ";user=" + username + ";password=" + password + ";";
         } catch (ClassNotFoundException ex) {
             Logger.getLogger(EmailDataBase.class.getName()).log(Level.SEVERE, null, ex);
