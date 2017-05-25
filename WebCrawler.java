@@ -35,7 +35,6 @@ public class WebCrawler implements Runnable{
     
     public WebCrawler(HashSet emails, List links) throws IOException {
         this.emails = emails;
-        //doc = Jsoup.connect("https://www.touro.edu/").get();
         this.links =  links;
         visitedLinks = Collections.synchronizedSet(new HashSet<>());
         currentURL = "https://www.touro.edu/";
