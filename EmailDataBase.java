@@ -64,7 +64,7 @@ public class EmailDataBase {
     
     public void checkAndUpdateEmails(ArrayList emails) throws SQLException {
         getEmails();
-        List<String> newEmails = dbEmails.stream().filter((String i) -> !emails.contains(i)).collect(Collectors.toList());
+        List<String> newEmails = emails.stream().filter((String i) -> !dbEmails.contains(i)).collect(Collectors.toList());
         if (!newEmails.isEmpty()) {
             updateEmails(newEmails);
         }
