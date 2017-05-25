@@ -62,7 +62,7 @@ public class EmailDataBase {
         }
     }
     
-    public void checkAndUpdateEmails(ArrayList emails) throws SQLException {
+    public void checkAndUpdateEmails(ArrayList<String> emails) throws SQLException {
         getEmails();
         List<String> newEmails = emails.stream().filter((String i) -> !dbEmails.contains(i)).collect(Collectors.toList());
         if (!newEmails.isEmpty()) {
